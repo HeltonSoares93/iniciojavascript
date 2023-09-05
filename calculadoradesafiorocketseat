@@ -1,0 +1,86 @@
+let options
+let numberOne = 0
+let numberTwo = 0
+let result
+
+while (options !=7) {
+
+  options = Number(prompt(`
+
+    Escolha um número de acordo com o cálculo que deseja realizar:
+
+    1.  Soma
+    2.  Subtração
+    3.  Multiplicação
+    4.  Divisão
+    5.  Resto da Divisão
+    6.  Verificar se o número é par ou ímpar
+    7.  Sair da operação
+  
+  `))
+
+  if(options == 1) {
+
+    numberOne = Number(prompt('Digite o primeiro número'))
+      numberTwo = Number(prompt('Digite o segundo número'))
+
+    result = Number(numberOne) + Number(numberTwo)
+      alert(result)
+  } 
+  else if (options == 2) {
+
+    numberOne = Number(prompt('Digite o primeiro número'))
+      numberTwo = Number(prompt('Digite o segundo número'))
+
+    result = Number(numberOne) - Number(numberTwo)
+      alert(result)
+  }
+  else if (options == 3) {
+
+    numberOne = Number(prompt('Digite o primeiro número'))
+      numberTwo = Number(prompt('Digite o segundo número'))
+
+    result = Number(numberOne) * Number(numberTwo)
+      alert(result)
+  }
+  else if (options == 4) {
+    
+    numberOne = Number(prompt('Digite o primeiro número da divisão'))
+      numberTwo = Number(prompt('Digite o segundo número'))
+      while(numberTwo == 0) {
+        alert('Não é possível dividir um número por 0(zero)')
+          numberTwo = Number(prompt('Digite o segundo número'))
+    } 
+
+    result = Number(numberOne) / Number(numberTwo)
+      alert(result)
+  }
+  else if (options == 5) {
+
+    numberOne = Number(prompt('Digite o primeiro número'))
+      numberTwo = Number(prompt('Digite o segundo número'))
+
+    result = Number(numberOne) % Number(numberTwo)
+      alert(result)
+  } 
+  else if (options == 6) {
+
+    numberOne = Number(prompt('Digite o número para verificar se é par'))
+
+      if(numberOne % 2 == 0) {
+        alert('O número é par')
+      }   else {
+            alert('O número é ímpar')
+      }
+      
+  }
+  else {
+
+    alert('Nenhum número registrado')
+  }
+  
+}
+
+if (options == 7) {
+  end
+}
